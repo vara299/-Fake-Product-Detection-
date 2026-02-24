@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Product Detector - StreamView</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">StreamView</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="actions">
+      <input id="uploadInput" type="file" accept="image/*" />
+      <button id="uploadBtn">Detect Fake</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="carousel">
+      <!-- Netflix-like big hero card -->
+      <div class="hero-card">
+        <img src="/static/sample_banner.jpg" alt="banner">
+        <div class="hero-info">
+          <h1>Fake Product Detection Demo</h1>
+          <p>Upload a product image and we'll tell you whether it's likely Genuine or Fake.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rows">
+      <h2>Featured Products</h2>
+      <div class="row-cards" id="cards">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for results -->
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="resultLabel">Result</h2>
+      <p id="resultConf"></p>
+      <p id="resultReason"></p>
+      <img id="resultImage" src="" alt="uploaded preview" style="max-width:100%;height:auto;margin-top:10px;">
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

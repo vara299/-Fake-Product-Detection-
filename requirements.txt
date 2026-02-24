@@ -1,0 +1,7 @@
+Flask==2.2.5
+Pillow==10.0.0
+Werkzeug==3.0.0
+
+# for fetching product/image URLs and parsing HTML
+requests>=2.31.0
+beautifulsoup4>=4.12.2
